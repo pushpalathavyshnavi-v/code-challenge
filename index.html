@@ -12,37 +12,37 @@
   <div>
 
     <center>  <nav>  <i class ="fa fa-globe" > </i> EFFIZIENT </nav>
-
+         
     </center>
-
+       
   </div>  
   <div class="container">
     <div> WELCOME TO PAGE!!!
         Fill the Below QUESTIONNAIRE For Further Process. After submitting, you will receive an email at the email address that you have provided with a Statement of Purpose customized for you. You can use and modify that as per your needs. 
         <br> <br> For more info & TO  IMMIGRATE : <a href="https://effizient.ca/" style="text-decoration: none;">  EFFIZIENT.COM </a>  
-
+          
     </div> <br>
-
-
+    
+ 
  <form action="action_page.php">
-
+      
           <label for="fname">First Name</label>
           <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
+      
           <label for="lname">Last Name</label>
           <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
+          
           <label for="fname">AGE</label>
           <input type="number" id="age"  placeholder=" your age"> <br> <br>
-
+         
           <div class="form-check form-check-inline">
-            Gender &nbsp;<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option1">
+            Gender <br>&nbsp;<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option1">
             <label class="inlineCheckbox3" for="inlineCheckbox1">Female</label>
-
+          
             <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
             <label class="inlineCheckbox4" for="inlineCheckbox2">Male</label>
           </div>
-
+          
           <br><label for="edu" >Higher Education </label>
           <select id="edu">
             <option value="australia">---</option>
@@ -50,25 +50,25 @@
             <option value="UG">B.TECH/BE/ANY UG_DEGREE</option>
             <option value="DIPLOMA">INTER/DIPLOMA<option>
           </select>
-
+          
           <label for="mname">email</label>
           <input type="text" id="mname" name="mail id" placeholder="@gmail.com">
-
+          
           <div>
            Do you want to Migrate  
-              <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="...">
+           <br> <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="...">
              <label class="radioNoLabel1" >YES</label>
 
              <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel2" value="" aria-label="...">
              <label class="radioNoLabel2" >NO</label>
             </div>
             <br>
-
+           
             <div class="form-check form-check-inline">
               Do YOU HAVE PASSPORT OR VISA 
-              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+              <br> <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
              <label class="inlineCheckbox1" >YES</label>
-
+           
              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
              <label class="inlineCheckbox2" >NO</label>
            </div>
@@ -81,24 +81,17 @@
             <option value="usa">USA</option>
             <option value="germany">GERMANY</option>
           </select>
-
+      
           <label for="subject">Purpose To Migrate</label>
           <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-          <span><input id="myButton" type="submit" value="Submit"> </span> 
-          <div style="padding-left: 50%;"><span>  page 1 of 1</span>
-           &nbsp;&nbsp;&nbsp;<span><button style=" color:white;background-color: rgba(164, 118, 24, 0.925);"> Clear form </button> </span> 
-        </div>
+      
+          <input id="myButton" type="submit" value="Submit"> 
+          
+          </div>
        </form>
-      </div>
-      <br> <br>  Never submit passwords through  Forms.
-      <p> THANKS FOR YOUR VIST </p>
+      </div><center> page 1 of 1 </center>
+       <p> <center><h4>Note : Never submit passwords through  Forms. </h4> </center></p>
       <script>
-
-            document.getElementById("myButton").onclick = function () 
-            {
-              location.href = "www.youtube.com";
-           };
         const form = document.querySelector('form');
         console.log (form )
         const formData = new FormData(form); 
@@ -111,10 +104,10 @@
                const json = JSON.stringify(obj) ;
                 localStorage.setItem('form',json) ;
                 window.location.href = "confirm.html";
-
+                
              });
       </script>
-
-
+       
+       
 </body>
 </html>
