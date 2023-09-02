@@ -6,7 +6,7 @@
     <title>code-challenge</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="code.css">
-    
+    <link rel="html" href="thank_you.html">
 </head>
 <body>
   <div>
@@ -19,7 +19,7 @@
   <div class="container">
     <div> WELCOME TO PAGE!!!
         Fill the Below QUESTIONNAIRE For Further Process. After submitting, you will receive an email at the email address that you have provided with a Statement of Purpose customized for you. You can use and modify that as per your needs. 
-        <br> <br> For more info & TO  IMMIGRATE : <a href="https://effizient.ca/" style="text-decoration: none;">  EFFIZIENT.COM </a>  
+        <br> <br> For more info & TO  IMMIGRATE : <a href="https://effizient.ca/" >  EFFIZIENT.COM </a>  
           
     </div> <br>
     
@@ -27,55 +27,55 @@
  <form action="action_page.php">
       
           <label for="fname">First Name</label>
-          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
       
           <label for="lname">Last Name</label>
-          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          <input type="text" id="lname" name="lastname" placeholder="Your last name.."required>
           
           <label for="fname">AGE</label>
-          <input type="number" id="age"  placeholder=" your age"> <br> <br>
+          <input type="number" id="age"  placeholder=" your age"required> <br> <br>
          
           <div class="form-check form-check-inline">
-            Gender <br>&nbsp;<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option1">
+            Gender <br>&nbsp;<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option1" >
             <label class="inlineCheckbox3" for="inlineCheckbox1">Female</label>
-          
+            
             <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
             <label class="inlineCheckbox4" for="inlineCheckbox2">Male</label>
           </div>
           
           <br><label for="edu" >Higher Education </label>
-          <select id="edu">
-            <option value="australia">---</option>
+          <select id="edu" required>
+            <option value="australia">select</option>
             <option value="PG"> MTECH/MS</option>
             <option value="UG">B.TECH/BE/ANY UG_DEGREE</option>
             <option value="DIPLOMA">INTER/DIPLOMA<option>
           </select>
           
-          <label for="mname">email</label>
-          <input type="text" id="mname" name="mail id" placeholder="@gmail.com">
+          <label for="mname">E-mail</label>
+          <input type="mail" id="mname" name="mail id" placeholder="@gmail.com"required>
           
           <div>
            Do you want to Migrate  
-           <br> <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="...">
-             <label class="radioNoLabel1" >YES</label>
+           <br> <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="..."required>
+             <label class="radioNoLabel1" >Yes</label>
 
-             <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel2" value="" aria-label="...">
-             <label class="radioNoLabel2" >NO</label>
+             <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel2" value="" aria-label="..."required>
+             <label class="radioNoLabel2" >No</label>
             </div>
             <br>
            
             <div class="form-check form-check-inline">
               Do YOU HAVE PASSPORT OR VISA 
               <br> <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-             <label class="inlineCheckbox1" >YES</label>
+             <label class="inlineCheckbox1" >Yes</label>
            
              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-             <label class="inlineCheckbox2" >NO</label>
+             <label class="inlineCheckbox2" >No</label>
            </div>
            <br>
           <label >Country</label>
-          <select id="country" name="country">
-            <option value="australia">---</option>
+          <select id="country" name="country"required>
+            <option value="australia">select</option>
             <option value="australia">Australia</option>
             <option value="canada">Canada</option>
             <option value="usa">USA</option>
@@ -83,10 +83,13 @@
           </select>
       
           <label for="subject">Purpose To Migrate</label>
-          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          <textarea id="subject" name="subject" placeholder="Write something.." required></textarea>
       
-          <input id="myButton" type="submit" value="Submit"> 
-          
+           <button onclick="fun()" type="submit" id="submit_button" >submit
+            
+          </button> 
+         
+         
           </div>
        </form>
       </div><center> page 1 of 1 </center>
@@ -94,20 +97,14 @@
       <script>
         const form = document.querySelector('form');
         console.log (form )
-        const formData = new FormData(form); 
-        const obj = Object.fromEntries(formData); 
-        const json = JSON.stringify(obj) ;
-        form.addEventListener('submit', (e) => {
-          e.savebyDefault(); 
-             const formData = new FormData(form); 
-              const obj = Object.fromEntries(formData); 
-               const json = JSON.stringify(obj) ;
-                localStorage.setItem('form',json) ;
-                window.location.href = "confirm.html";
-                
-             });
+        form.addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        window.location.href = 'thank_you.html';
+        
+        })
+        
       </script>
        
        
 </body>
-</html>
+</html>                                                 
